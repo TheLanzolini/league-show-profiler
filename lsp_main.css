@@ -1,0 +1,41 @@
+.lsp_profileicon{
+	width: 75px;
+	padding: 5px;
+}
+.lsp_championicon{
+	width: 70px;
+	float: left;
+}
+.lsp_banner{
+	border: 1px solid black;
+	background-image: url('celeb_banner.jpg');
+	color: white;
+}
+.lsp_league, .lsp_name{
+	position: relative;
+	top: -30px;
+	font-size: 28px;
+	padding: 5px;
+	left: 10px;
+	border: 1px solid white;
+	background-color: black;
+}
+.lsp_league{
+	margin-left: 5px;
+}
+.lsp_recent_thumb{
+	float: left;
+	padding: 5px;
+	background-color: black;
+	margin: 5px;
+}
+.lsp_recent{
+	clear: both;
+	height: 115px;
+}
+.recent_label{
+	padding: 5px;
+	background-color: black;
+	margin-left: 40%;
+	width: 10%;
+}
