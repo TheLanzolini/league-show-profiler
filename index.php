@@ -28,7 +28,7 @@ add_action( 'admin_menu', 'lsp_menu' );
 
 add_action( 'wp_enqueue_scripts', 'register_plugin_styles' );
 function register_plugin_styles() {
-    wp_register_style( 'main', plugins_url( 'ls_profiler/lsp_main.css' ) );
+    wp_register_style( 'main', plugins_url( 'lsp_profiler/lsp_main.css' ) );
     wp_enqueue_style( 'main' );
 }
 
@@ -72,7 +72,7 @@ function leagueshow_func( $atts ){
         curl_close($ch);
         echo '<div class="lsp_banner">';
         echo '<div class="lsp_s_name">';
-        echo '<img class="lsp_profileicon" src="'. plugins_url( 'ls_profiler/profile-icons/'.$s_summoner->profileIconId.'.png').'">';        
+        echo '<img class="lsp_profileicon" src="'. plugins_url( 'lsp_profiler/profile-icons/'.$s_summoner->profileIconId.'.png').'">';        
         echo '<span class="lsp_name">'.$s_summoner->name.'</span>';
         echo '<span class="lsp_league">'.' '.$s_tier.' '.$s_rank.' '.$s_points.'pts'.'</span>';
         foreach($stats->playerStatSummaries as $s){
@@ -104,7 +104,7 @@ function leagueshow_func( $atts ){
                         echo 'OTHER';
                     }
                     echo '<br />';    
-                    echo '<img class="lsp_championicon" src="'. plugins_url( 'ls_profiler/champion-squares/'.$champion->name.'_Square_0'.'.png').'">';
+                    echo '<img class="lsp_championicon" src="'. plugins_url( 'lsp_profiler/champion-squares/'.$champion->name.'_Square_0'.'.png').'">';
                 }
             }
             echo'</div>';
