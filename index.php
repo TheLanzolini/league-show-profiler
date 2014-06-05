@@ -37,23 +37,23 @@ function leagueshow_func( $atts ){
 		'summoner' => null
 	), $atts ) );
         $ch = curl_init();  
-        curl_setopt($ch, CURLOPT_URL, "https://prod.api.pvp.net/api/lol/na/v1.1/summoner/by-name/".$summoner."?api_key=c0255ae8-0898-4904-be03-9accec1817ca");  
+        curl_setopt($ch, CURLOPT_URL, "https://prod.api.pvp.net/api/lol/na/v1.1/summoner/by-name/".$summoner."?api_key=");  
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
         $s_summoner = curl_exec($ch);  
         $s_summoner = json_decode($s_summoner);
-        curl_setopt($ch, CURLOPT_URL, "https://prod.api.pvp.net/api/lol/na/v1.1/game/by-summoner/".$s_summoner->id."/recent?api_key=c0255ae8-0898-4904-be03-9accec1817ca");
+        curl_setopt($ch, CURLOPT_URL, "https://prod.api.pvp.net/api/lol/na/v1.1/game/by-summoner/".$s_summoner->id."/recent?api_key=");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $recent = curl_exec($ch);
         $recent = json_decode($recent);
-        curl_setopt($ch, CURLOPT_URL, "https://prod.api.pvp.net/api/na/v2.1/league/by-summoner/".$s_summoner->id."?api_key=c0255ae8-0898-4904-be03-9accec1817ca");
+        curl_setopt($ch, CURLOPT_URL, "https://prod.api.pvp.net/api/na/v2.1/league/by-summoner/".$s_summoner->id."?api_key");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $league = curl_exec($ch);
         $league = json_decode($league);
-        curl_setopt($ch, CURLOPT_URL, "https://prod.api.pvp.net/api/lol/na/v1.1/champion?api_key=c0255ae8-0898-4904-be03-9accec1817ca");
+        curl_setopt($ch, CURLOPT_URL, "https://prod.api.pvp.net/api/lol/na/v1.1/champion?api_key=");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $champions = curl_exec($ch);
         $champions = json_decode($champions);
-        curl_setopt($ch, CURLOPT_URL, "https://prod.api.pvp.net/api/lol/na/v1.1/stats/by-summoner/".$s_summoner->id."/summary?season=SEASON3&api_key=c0255ae8-0898-4904-be03-9accec1817ca");
+        curl_setopt($ch, CURLOPT_URL, "https://prod.api.pvp.net/api/lol/na/v1.1/stats/by-summoner/".$s_summoner->id."/summary?season=SEASON3&api_key=");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $stats = curl_exec($ch);
         $stats = json_decode($stats);
